@@ -4,7 +4,6 @@ $(".menu > ul > li").each(function() {
 	 	$(".menu > ul > li").css('background-color',"#fff");
 		if ($(this).find("ul").length != 0) {
 			$(this).css('background-color',"#f2f2f2");
-			//
 			if ($(this).hasClass('active')) {
 				$(".menu > ul > li").css('background-color',"#fff");
 				$(this).removeClass('active');		
@@ -25,18 +24,17 @@ $(".menu > ul > li").each(function() {
 
 $(document).mouseup(function (e) {
     var container = $(".menu > ul > li > ul");
-    if (container.has(hasClass('active')).length === 0){
+    if (container.hasClass('active').length === 0){
 		$(".menu > ul > li").css('background-color',"#fff");
-  
     }
 });
 
 $(function(){
   $(document).click(function(event)  {
     if ($(event.target).closest(".menu > ul > li").length) return;
-    $(".menu > ul > li > ul").hide("slow");
-	  $(".menu > ul > li").css('background-color',"#fff");
-    event.stopPropagation();
+    	$(".menu > ul > li").removeClass('active');
+		$(".menu > ul > li").css('background-color',"#fff");
+    	event.stopPropagation();
   });
 });
 
@@ -97,4 +95,3 @@ $('footer .conter-footer .nav .media-box p').each(function() {
 		}
 		})
 })
-

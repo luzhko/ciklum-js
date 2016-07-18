@@ -201,6 +201,12 @@ header {
 	left: 0px;
 	z-index: 10;
 }
+.menu > ul  ul ul {
+	background-color: rgb(229, 229, 229);
+}
+.menu > ul  ul ul a:hover {
+	background-color: #d9d9d9;
+}
 
 .menu li {
 	color: #2F2F2F;
@@ -594,6 +600,12 @@ footer p.link-footer-menu a:last-child {
 		min-height: 450px;
 	}
 } 
+@media (min-width: 901px) {
+		.main-header .menu  {
+		display: block !important;
+	} 
+}
+
 @media (max-width: 900px){
 	.main-header .menu {
 		display: none;
@@ -601,8 +613,9 @@ footer p.link-footer-menu a:last-child {
 		right: 0px;
 		top: 48px;
 		z-index: 999;
-		
+		width: 100%;
 	}
+	
 	.main-header .menu ul {
 		background-color: #f2f2f2;
 	}
@@ -617,6 +630,24 @@ footer p.link-footer-menu a:last-child {
 	.main-header .mob-menu:hover {
 		background-color: #f2f2f2;
 	}
+	.menu > ul {
+		position: absolute;
+		z-index: 999;
+		width: 100%;
+		right: 0;
+		max-width: 300px;
+		width: 100%;
+	}
+	.menu ul ul  {
+		position: static;
+		width: 100%;
+	}
+
+	.menu ul  ul li {
+		width: 100% !important;
+	}
+
+	
 	
 }
 @media (min-width: 768px) {
